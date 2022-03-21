@@ -1,0 +1,12 @@
+<h2>orderlista</h2>
+
+<div class="bigger">
+  <p>Namn:</p>
+  <p>Tid:</p>
+  <p>Pris:</p>
+</div>
+<div *ngFor="let o of orderToApis">
+  <p>{{ o.createdBy }}</p>
+  <p>{{ o.created }}</p>
+  <p>{{ o.totalPrice }} Kr</p>
+</div>

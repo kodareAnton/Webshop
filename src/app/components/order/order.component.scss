@@ -1,0 +1,46 @@
+form {
+  border: 1px solid black;
+
+  .box {
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+img {
+  width: 5%;
+  height: 5%;
+}
+
+.order {
+  margin: 10%;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+
+.orderProduct {
+  border: 1px solid black;
+  background-color: rgba(0, 0, 255, 0.308);
+  margin: 5%;
+
+  h1 {
+    margin: 0%;
+  }
+
+  p {
+    margin: 0%;
+  }
+
+  img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+  }
+}
+
+h2 {
+  background-color: rgba(0, 0, 255, 0.274);
+}

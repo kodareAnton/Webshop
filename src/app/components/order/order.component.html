@@ -1,0 +1,36 @@
+<!--formulät-->
+
+<form [formGroup]="userForm" (ngSubmit)="pushOrderToApi()">
+  <div class="box">
+    <label for="firstname">Förnamn:</label>
+    <input type="text" id="firstname" formControlName="firstName" />
+  </div>
+  <div class="box">
+    <label for="lastname">Efternamn:</label>
+    <input type="text" id="lastname" formControlName="lastName" />
+  </div>
+  <div class="box">
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email" />
+  </div>
+  <div class="box">
+    <label for="date">Ålder</label>
+    <input type="number" id="date" formControlName="age" />
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid">Beställ</button>
+</form>
+
+<!--produkter-->
+
+<div *ngFor="let cartItem of cart.items" class="orderProduct">
+  <div class="right">
+    <h1>{{ cartItem.movie.name }}</h1>
+    <p>Antal: {{ cartItem.quantity }}</p>
+    <p>Pris: {{ cartItem.movie.price }} Kr</p>
+    <button (click)="removeFromCart(cartItem)">Remove</button>
+    <img src="{{ cartItem.movie.imageUrl }}" alt=" {{ cartItem.movie.name }}" />
+  </div>
+</div>
+
+<h2>Att Betala: {{ cart.totalprice }} Kr</h2>

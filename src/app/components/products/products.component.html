@@ -1,0 +1,9 @@
+<div class="row">
+  <div *ngFor="let movie of movies" class="box">
+    <img src="{{ movie.imageUrl }}" alt="{{ movie.name }}" />
+    <h1>{{ movie.name }}</h1>
+    <p>{{ movie.description }}</p>
+    <p>{{ movie.price }} kr</p>
+    <button (click)="addToCart(movie)">Köp</button>
+  </div>
+</div>
